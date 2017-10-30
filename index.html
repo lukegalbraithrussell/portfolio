@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>Luke Russell</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,20 +21,20 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-diamond"></span>
+							<span class="icon fa-bar-chart"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Dimension</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+								<h1>Hello!</h1>
+								<p>I'm an undergraduate student at Willamette University.<br />
+								One day I hope to do some cool stuff, and that cool stuff will be here.</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
 								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
+								<li><a href="#research">Research</a></li>
+								<li><a href="#projects">Projects</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -52,17 +52,25 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
 							</article>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+						<!-- Research -->
+							<article id="research">
+								<h2 class="major">Research</h2>
+								<!--<span class="image main"><img src="images/pic02.jpg" alt="" /></span>-->
+								<p>My senior thesis is based around the photometry of earthbound fireballs. Space, while mostly space, is not actually completely space. There's tons of stuff in it! Obviously there's planets and stars and whatnot, but what we are concerned about are meteors. Specifically, we are concerned about the meteors on the low end of the size distribution. While rocks the size of baseballs may not seem dangerous to those of us protected by Earth's atmosphere, they pose great threats to missions beyond our planet. We need to know how many of these objects are out there in order to know how strong of armor should be used and to get better estimates of lifespans on our structures in space. </p>
+								<p>If you've taken an astronomy class, you're probably thinking "but Luke, we already know how many there are! There's that well-known linear size-frequency plot of asteroid population distributions." And, yes that's true! The general trend is well known. What we are curious is to whether there are any descrepancies in that trend on the lower spectrum, and maybe those would become apparent if much more data was collected.</p>
+								<p>That's where our research comes in. Currently, fireballs can be detected entering our atmosphere using all-sky cameras set up by NASA and other groups. They are all housed in large structures, hooked up to computers in buildings and what not. It's a big setup. This large investment prevents some people from setting up their own, and it also limits the amount of total sky coverage we can get. Our all-sky camera is one-of-a-kind (I think) in that it all of its components are housed inside its chasis, which is no bigger tha bear cannister. It still depends on external power, but that could be easily remedied with a purchase of a battery. What we want to do is show that our tiny unit (named Deesix due to its resemblance of Wedge Antilles astromech unit) is capable of collecting just as good data as the larger structures elsewhere.</p>
+								<span class="image half"><img src="images/deesix.jpg" alt="" /></span>
+
+
+								<p>The size of meteors are determined through a long chain of physical relations that begin at its apparent magnitude. So, firstthing to do is be able to find the magnitude of the fireball when Deesix detects it. I've written a script where we can find the magnitude of the fireball as long as we know the apparent magnitude of another object in the sky (such as a star). This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to its light curve to extract the value of all its pixels. This is shown below.
+								<span class="image main"><img src="images/Lightcurves.png" alt="" /></span>
+
+								<p> This was tested on a image collected from another camera. Hopefully we can test the script out on images collected from Deesix soon. 
 							</article>
 
 						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
+							<article id="projects">
+								<h2 class="major">Projects</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
@@ -89,9 +97,7 @@
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
@@ -154,9 +160,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</ol>
 									<h4>Icons</h4>
 									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
 									</ul>
 
