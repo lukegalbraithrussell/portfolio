@@ -26,7 +26,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Hello!</h1>
-								<p>I'm an undergraduate student at Willamette University.<br />
+								<p>I'm a guy about to graduate from Willamette University.<br />
 								One day I hope to do some cool stuff, and that cool stuff will be here.</p>
 							</div>
 						</div>
@@ -56,30 +56,45 @@
 							<article id="research">
 								<h2 class="major">Research</h2>
 								<!--<span class="image main"><img src="images/pic02.jpg" alt="" /></span>-->
-								<p>My senior thesis is based around the photometry of earthbound fireballs. Space, while mostly space, is not actually completely space. There's tons of stuff in it! Obviously there's planets and stars and whatnot, but what we are concerned about are meteors. Specifically, we are concerned about the meteors on the low end of the size distribution. While rocks the size of baseballs may not seem dangerous to those of us protected by Earth's atmosphere, they pose great threats to missions beyond our planet. We need to know how many of these objects are out there in order to know how strong of armor should be used and to get better estimates of lifespans on our structures in space. </p>
+								<p>My senior thesis is based around the photometry of earthbound fireballs. Space, while mostly space, is not actually completely space. There's tons of stuff in it! Obviously there's planets and stars and whatnot, but we care about meteors. Specifically, we are concerned about the meteors on the low end of the size distribution. While rocks the size of baseballs may not seem dangerous to those of us protected by Earth's atmosphere, they pose great threats to missions beyond our planet. We need to know how many of these objects are out there in order to know how strong of armor should be used and to get better estimates of lifespans on our structures in space. </p>
 								<p>If you've taken an astronomy class, you're probably thinking "but Luke, we already know how many there are! There's that well-known linear size-frequency plot of asteroid population distributions." And, yes that's true! The general trend is well known. What we are curious is to whether there are any descrepancies in that trend on the lower spectrum, and maybe those would become apparent if much more data was collected.</p>
 								<p>That's where our research comes in. Currently, fireballs can be detected entering our atmosphere using all-sky cameras set up by NASA and other groups. They are all housed in large structures, hooked up to computers in buildings and what not. It's a big setup. This large investment prevents some people from setting up their own, and it also limits the amount of total sky coverage we can get. Our all-sky camera is one-of-a-kind (I think) in that it all of its components are housed inside its chasis, which is no bigger tha bear cannister. It still depends on external power, but that could be easily remedied with a purchase of a battery. What we want to do is show that our tiny unit (named Deesix due to its resemblance of Wedge Antilles astromech unit) is capable of collecting just as good data as the larger structures elsewhere.</p>
 								<span class="image half"><img src="images/deesix.jpg" alt="" /></span>
 
 
-								<p>The size of meteors are determined through a long chain of physical relations that begin at its apparent magnitude. So, firstthing to do is be able to find the magnitude of the fireball when Deesix detects it. I've written a script where we can find the magnitude of the fireball as long as we know the apparent magnitude of another object in the sky (such as a star). This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to its light curve to extract the value of all its pixels. This is shown below.
-								<span class="image main"><img src="images/Lightcurves.png" alt="" /></span>
+								<p>The size of meteors are determined through a long chain of physical relations that begin at its apparent magnitude. So, first thing to do is be able to find the magnitude of the fireball when Deesix detects it. I've written a script where we can find the magnitude of the fireball as long as we know the apparent magnitude of another object in the sky (such as a star). 
+								<span class="image main"><img src="images/ProgramLandscape.png" alt="" /></span>
+								
+								This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to slices of the data to automatically find the radius at that frame, then summing over all the pixesl to find the magnitude. 
+								<span class="image main"><img src="images/nasagraph.png" alt="" /></span>
 
-								<p> This was tested on a image collected from another camera. Hopefully we can test the script out on images collected from Deesix soon. 
+								<p> After the program does that for every frame, we can get the light curve of the event. Here's a light curve from an Iridium flare.
+								<span class="image main"><img src="images/flare.png" alt="" /></span>
+
+								<p> And a light curve from an event from NASA's all-sky camera network, compared with their own light curve of the event.
+								<span class="image main"><img src="images/curve.png" alt="" /></span>
+
+								We did this for a lot of events! Here, violin plots make it easy to visualize how far off my program was from NASA's
+								<span class="image main"><img src="images/AllViolins.png" alt="" /></span>
+
+
+
+
+								 
 							</article>
 
-						<!-- About -->
-							<article id="projects">
-								<h2 class="major">Projects</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
+						<!--[> About <]-->
+							<!--<article id="projects">-->
+								<!--<h2 class="major">Projects</h2>-->
+								<!--<span class="image main"><img src="images/pic03.jpg" alt="" /></span>-->
+								<!--<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>-->
+							<!--</article>-->
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
 								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<p>Contact me with questions or comment! </p>
+								<p>Contact me with questions or comments! </p>
 								<p> lgrussel @ willamette.edu
 							</article>
 
