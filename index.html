@@ -35,7 +35,7 @@
 							<ul>
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#research">Research</a></li>
-								<li><a href="#media">Media</a></li>
+								<li><a href="#media">Data</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<li><a href="#resume">Resume</a></li>
 							</ul>
@@ -51,34 +51,37 @@
 								<span class="image half"><img src="images/LukeRussellSquare.jpg" alt="" /></span>
 								<p>I'm currently an undergraduate physics student at Willamette University. I'm finishing up my senior year, where I get to work on some pretty neat <a href="#research">research</a> with Professor Jed Rembold.</p>
 								<p>In my free time I do cool stuff like Professor Rembold's <a href="https://jrembold.github.io/WUPhys-CodeComp/">Bot Tournament</a> and somewhat superfluous stuff like customizing my ArchLinux <a href="https://github.com/lukegalbraithrussell/dotfiles">build.</a> I also am pretty into weightlifting, probably because <i> Mens sana in corpore sano</i> was drilled into my head by my Latin prof. </p>
-
+								<p>Oh, and I also have started writing little explanations on sabermetrics for more old-school baseball fans (like my dad) in the form of  <a href="https://github.com/lukegalbraithrussell/Baseball">jupyter notebooks.</a> Go Mariners!</p>
 								<p> I'm also looking for a job! Feel free to glance at my <a href="#resume">resume.</a> 
 							</article>
 
 						<!-- Research -->
 							<article id="research">
 								<h2 class="major">Research</h2>
-								<!--<span class="image main"><img src="images/pic02.jpg" alt="" /></span>-->
-								<p>My senior thesis is based around the photometry of earthbound fireballs. Space, while mostly space, is not actually completely space. There's tons of stuff in it! Obviously there's planets and stars and whatnot, but we care about meteors. Specifically, we are concerned about the meteors on the low end of the size distribution. While rocks the size of baseballs may not seem dangerous to those of us protected by Earth's atmosphere, they pose great threats to missions beyond our planet. We need to know how many of these objects are out there in order to know how strong of armor should be used and to get better estimates of lifespans on our structures in space. </p>
-								<p>If you've taken an astronomy class, you're probably thinking "but Luke, we already know how many there are! There's that well-known linear size-frequency plot of asteroid population distributions." And, yes that's true! The general trend is well known. What we are curious is to whether there are any descrepancies in that trend on the lower spectrum, and maybe those would become apparent if much more data was collected.</p>
-								<p>That's where our research comes in. Currently, fireballs can be detected entering our atmosphere using all-sky cameras set up by NASA and other groups. They are all housed in large structures, hooked up to computers in buildings and what not. It's a big setup. This large investment prevents some people from setting up their own, and it also limits the amount of total sky coverage we can get. Our all-sky camera is one-of-a-kind (I think) in that it all of its components are housed inside its chasis, which is no bigger tha bear cannister. It still depends on external power, but that could be easily remedied with a purchase of a battery. What we want to do is show that our tiny unit (named Deesix due to its resemblance of Wedge Antilles astromech unit) is capable of collecting just as good data as the larger structures elsewhere.</p>
+								<iframe width="100%" height="400" src="https://drive.google.com/file/d/1zpyOVjsdoFk81eTlTln4xz2KmeiFUhNd/preview"></iframe>
+								<!--<embed src="images/presentation.pdf" width="100%" height="400" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">-->
+								<p>My senior thesis is title The Photometry of Celestial Fireballs. Outer space, while mostly space, is not entirely empty. There are planets, stars, comets, and many other objects, but here we are concerned about meteors. Specifically, we are interested in the smallest meteors. While rocks the size of pebbles may not seem dangerous to those of us protected by Earth’s atmosphere, they pose a great threat to equipment and life beyond that atmosphere. We desire to know how many of these objects are in orbit near Earth in order to estimate the necessary level of protection for our structures in space and to better estimate the lifespans of those structures.</p>
+								<p>Currently, one of the ways meteors can be detected entering our atmosphere is by all-sky cameras detecting the bright streaks they leave as they ablate in the atmosphere. This brightness is what gives them another name: fireballs. All-sky cameras are set up by NASA and other groups. They are installed on roofs or mounts and hooked up to desktop computers in buildings. It is a big and inflexible setup. This required infrastructure limits the amount of setups that currently exist, which in turn limits the amount of total sky coverage we can get. Our all-sky camera explores a new design: one in which its detection software is housed inside its small, basketball-sized chassis. It currently depends on external power, but low power consumption makes it a strong candidate to run off battery power if needed. We aim to show that our tiny unit (named D6 due to its resemblance to Wedge Antille's astromech unit) is capable of observing and analyzing fireballs just as reliably as the larger, more established networks.</p>
 								<span class="image half"><img src="images/deesix.jpg" alt="" /></span>
-
-
+								<p>We are using our all-sky camera to detect meteors, utilizing photometry to calculate the meteors’ magnitudes, and then extrapolating their masses from those magnitudes. There have been many other studies by larger all-sky networks to create a model for the population distribution. We have no reason to expect our data to deviate greatly from this trend. In fact, we are hoping to test the effectiveness of our all-sky camera setup by comparing its findings to the established model. Also, while the general trend is well known, there is no guarantee that it is as precise as it could be. We are curious about any possible small discrepancies within the model regarding the smaller size meteoroids, and believe that if any discrepancies are there, they would only become apparent if data was being collected much more frequently than the current rate.</p>
+								
 								<p>The size of meteors are determined through a long chain of physical relations that begin at its apparent magnitude. So, first thing to do is be able to find the magnitude of the fireball when Deesix detects it. I've written a script where we can find the magnitude of the fireball as long as we know the apparent magnitude of another object in the sky (such as a star). 
 								<span class="image main"><img src="images/ProgramLandscape.png" alt="" /></span>
 								
-								This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to slices of the data to automatically find the radius at that frame, then summing over all the pixesl to find the magnitude. 
-								<span class="image main"><img src="images/nasagraph.png" alt="" /></span>
+								<p>The results are concisely summarized in the poster below, made for a poster presentation at Linfield College.</p>
+								<span class="image main"><img src="images/ThesisPoster.png" alt="" /></span>  
 
-								<p> After the program does that for every frame, we can get the light curve of the event. Here's a light curve from an Iridium flare.
-								<span class="image main"><img src="images/flare.png" alt="" /></span>
+								<!--This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to slices of the data to automatically find the radius at that frame, then summing over all the pixesl to find the magnitude. -->
+								<!--<span class="image main"><img src="images/nasagraph.png" alt="" /></span>-->
 
-								<p> And a light curve from an event from NASA's all-sky camera network, compared with their own light curve of the event.
-								<span class="image main"><img src="images/curve.png" alt="" /></span>
+								<!--<p> After the program does that for every frame, we can get the light curve of the event. Here's a light curve from an Iridium flare.-->
+								<!--<span class="image main"><img src="images/flare.png" alt="" /></span>-->
 
-								We did this for a lot of events! Here, violin plots make it easy to visualize how far off my program was from NASA's
-								<span class="image main"><img src="images/AllViolins.png" alt="" /></span>
+								<!--<p> And a light curve from an event from NASA's all-sky camera network, compared with their own light curve of the event.-->
+								<!--<span class="image main"><img src="images/curve.png" alt="" /></span>-->
+
+								<!--We did this for a lot of events! Here, violin plots make it easy to visualize how far off my program was from NASA's-->
+								<!--<span class="image main"><img src="images/AllViolins.png" alt="" /></span>-->
 
 
 
@@ -88,16 +91,34 @@
 
 						<!--[> Media <]-->
 							<article id="media">
-								<h2 class="major">Media</h2>
-								<p> I presented my thesis research at a talk at my university. The video is the talk, and the slides are shown below it in case you can't read them from the video angle, or just don't want to watch a twenty minute video of me talking. </p>
-								<iframe width="100%" height="400" src="https://drive.google.com/file/d/1zpyOVjsdoFk81eTlTln4xz2KmeiFUhNd/preview"></iframe>
-
-								M<!--<span class="image main"><embed src="images/presentation.pdf" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html" /></span>-->
-								<embed src="images/presentation.pdf" width="100%" height="400" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
-									<p></p>
-									<p>For our senior thesis we also presented posters at another colllege in a symposium-type manner. Here's my poster, presented to the physics community of Linfield College.
-								</p>
-								<span class="image main"><img src="images/ThesisPoster.png" alt="" /></span>  
+								<h2 class="major">Data (Under Construction)</h2>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/1.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/2.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/3.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<!--<a href="https://github.com/jrembold/AllSky"><img src="images/4.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>-->
+								<a href="https://github.com/jrembold/AllSky"><img src="images/5.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/6.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/7.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/8.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/9.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/10.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/11.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/12.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/jrembold/AllSky"><img src="images/13.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>	
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/14.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/15.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/16.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/17.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/18.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/19.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/20.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/21.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/22.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/23.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/24.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/25.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/26.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/27.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
 
 
 					</article>
