@@ -37,16 +37,14 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Hello!</h1>
-								<p>I'm a guy graduating from Willamette University.<br />
-								One day I hope to do some cool stuff, and that cool stuff will be here.</p>
+								<p>One day I hope to do some cool stuff, and that cool stuff will be here.</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#research">Research</a></li>
-								<li><a href="#media">Data</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#research">Meteors</a></li>
+								<li><a href="#politics">Politics</a></li>
+								<li><a href="#data">Data</a></li>
 								<li><a href="#resume">Resume</a></li>
 							</ul>
 						</nav>
@@ -59,15 +57,15 @@
 							<article id="intro">
 								<h2 class="major">Intro</h2>
 								<span class="image half"><img src="images/LukeRussellSquare.jpg" alt="" /></span>
-								<p>I'm currently an undergraduate physics student at Willamette University. I'm finishing up my senior year, where I get to work on some pretty neat <a href="#research">research</a> with Professor Jed Rembold.</p>
 								<p>In my free time I do cool stuff like Professor Rembold's <a href="https://jrembold.github.io/WUPhys-CodeComp/">Bot Tournament</a> and somewhat superfluous stuff like customizing my ArchLinux <a href="https://github.com/lukegalbraithrussell/dotfiles">build.</a> I also am pretty into weightlifting, probably because <i> Mens sana in corpore sano</i> was drilled into my head by my Latin prof. </p>
-								<p>Oh, and I also have started writing little explanations on sabermetrics for more old-school baseball fans (like my dad) in the form of  <a href="https://github.com/lukegalbraithrussell/Baseball">jupyter notebooks.</a> Go Mariners!</p>
+								<p><a href="mailto:luke.galbraith.russell@gmail.com" target="_top">Email me</a> with questions or comments. </p>
+								<p>Check out my projects on my <a href="https://github.com/lukegalbraithrussell">Github.</a>
 								<p> I'm also looking for a job! Feel free to glance at my <a href="#resume">resume.</a> 
 							</article>
 
 						<!-- Research -->
 							<article id="research">
-								<h2 class="major">Research</h2>
+								<h2 class="major">Meteors</h2>
 								<iframe width="100%" height="400" src="https://www.youtube.com/embed/VmR5fewT9g8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 								<!--<iframe width="100%" height="400" src="https://drive.google.com/file/d/1zpyOVjsdoFk81eTlTln4xz2KmeiFUhNd/preview"></iframe>-->
 								<!--<embed src="images/presentation.pdf" width="100%" height="400" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">-->
@@ -100,8 +98,41 @@
 								 
 							</article>
 
+						<!-- Research -->
+							<article id="politics">
+								<h2 class="major">Political Clusters</h2>
+								<p>This project can also be titled as "Why KMeans Clustering Is Pretty Bad With Non-Symmetric Datasets" or "Delineating States into Nice Clusters Is Unrealistic, and Only Serves to Push Lazy Political Narratives". Or I guess it could also be titled "Idiot Uses Wrong Clustering Method, Ignoring Obviously Perfect Method".</p>
+								<p>Anyway, the point of this project was for me to practive doing some simple unsupervised machine learning while also trying to solve the forever debated problem of what the regions of the United States are. For example, people say Hilary Clinton lost because of the midwest, but what even is the midwest?? Nobody really can agree on that. So I set out to see if I could find some pattern in the political data of the states. </p>
+								<p>Basically, I collected the voting results for all the states for all the presidential elections since 1976, the racial demographics of the states as of 2016, the geographic centers of each state, and the results of 538's polls on what people consider the midwest and the south. I then tried KMeans clustering the data, trying to find good weights for the features. </p>
+								<p> The clustering could never quite settle down, but an example of the types of maps I was producing are shown here:</p>
+								<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div><div id="8aedbce4-949f-40d6-b40c-55cdbb2dc105" style="height: 100%; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";
+if (document.getElementById("8aedbce4-949f-40d6-b40c-55cdbb2dc105")) {
+    Plotly.newPlot("8aedbce4-949f-40d6-b40c-55cdbb2dc105", [{"autocolorscale": false, "colorscale": [[0.0, "rgb(141,211,199)"], [0.125, "rgb(255,255,179)"], [0.25, "rgb(190,186,218)"], [0.375, "rgb(251,128,114)"], [0.5, "rgb(128,177,211)"], [0.625, "rgb(253,180,98)"], [0.75, "rgb(179,222,105)"], [0.875, "rgb(252,205,229)"], [1.0, "rgb(217,217,217)"]], "locationmode": "USA-states", "locations": ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"], "marker": {"line": {"color": "rgb(255,255,255)", "width": 2}}, "z": [5.0, 7.0, 0.0, 1.0, 6.0, 0.0, 2.0, 2.0, 5.0, 5.0, 6.0, 7.0, 4.0, 3.0, 3.0, 3.0, 1.0, 5.0, 2.0, 2.0, 2.0, 4.0, 4.0, 5.0, 3.0, 7.0, 3.0, 0.0, 2.0, 2.0, 0.0, 2.0, 5.0, 7.0, 4.0, 1.0, 6.0, 2.0, 2.0, 5.0, 7.0, 1.0, 5.0, 0.0, 2.0, 2.0, 6.0, 1.0, 4.0, 7.0], "type": "choropleth", "uid": "f2b0125d-b333-4c98-8183-0d2a5c652e79"}], {}, {"showLink": false, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly"}); 
+}
+</script><script type="text/javascript">window.addEventListener("resize", function(){if (document.getElementById("8aedbce4-949f-40d6-b40c-55cdbb2dc105")) {Plotly.Plots.resize(document.getElementById("8aedbce4-949f-40d6-b40c-55cdbb2dc105"));};})</script></div>
+
+								<!--This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to slices of the data to automatically find the radius at that frame, then summing over all the pixesl to find the magnitude. -->
+								<!--<span class="image main"><img src="images/nasagraph.png" alt="" /></span>-->
+
+								<!--<p> After the program does that for every frame, we can get the light curve of the event. Here's a light curve from an Iridium flare.-->
+								<!--<span class="image main"><img src="images/flare.png" alt="" /></span>-->
+
+								<!--<p> And a light curve from an event from NASA's all-sky camera network, compared with their own light curve of the event.-->
+								<!--<span class="image main"><img src="images/curve.png" alt="" /></span>-->
+
+								<!--We did this for a lot of events! Here, violin plots make it easy to visualize how far off my program was from NASA's-->
+								<!--<span class="image main"><img src="images/AllViolins.png" alt="" /></span>-->
+
+
+
+
+								 
+							</article>
+
+
 						<!--[> Media <]-->
-							<article id="media">
+							<article id="data">
 								<h2 class="major">Data (Under Construction)</h2>
 								<a href="https://github.com/jrembold/AllSky"><img src="images/1.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
 								<a href="https://github.com/jrembold/AllSky"><img src="images/2.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
@@ -139,8 +170,6 @@
 								<h2 class="major">Contact</h2>
 								<!--<span class="image main"><img src="images/pic04.jpg" alt="" /></span>-->
 								<!--<p> my Github account for projects and their source code <a href="https://github.com/lukegalbraithrussell" class="icon fa-github"><span class="label">Github</span></a>-->
-								<p><a href="mailto:luke.galbraith.russell@gmail.com" target="_top">Email me</a> with questions or comments. </p>
-								<p>Check out my projects on my <a href="https://github.com/lukegalbraithrussell">Github.</a>
 							</article>
 
 						<!-- Resume -->
