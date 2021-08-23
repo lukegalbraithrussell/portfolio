@@ -40,7 +40,7 @@ body {
 }
 
 /* mage */
-img {
+.article-image {
   background-color: #aaa;
   width: 100%;
   height: 60%;
@@ -63,13 +63,18 @@ img {
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1100px) {
+  .column {   
+    width: 50%;
+  }
+}
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 800px) {
   .column {   
     width: 100%;
   }
 
-  img {
+  .article-image {
   height: 70%;
   }
 }
@@ -80,6 +85,21 @@ img {
 
 <div class="header">
   <h3>A Collection of Luke Russell's Writings</h3>
+
+  <p>
+    <a style="text-decoration:none" href="https://github.com/lukegalbraithrussell">
+    <img alt="github.com/lukegalbraithrussell" src="pics/githublogo.png" height="40px">
+    </a>
+
+    <a style="text-decoration:none" href="mailto:luke.galbraith.russell@gmail.com">
+    <img alt="mailto:luke.galbraith.russell@gmail.com" src="pics/email.png" height="40px">
+    </a>
+
+    <a style="text-decoration:none" href="https://www.linkedin.com/in/lukegalbraithrussell/">
+      <img alt="linkedin.com/in/lukegalbraithrussell/" src="pics/linkedin.png" height="40px">
+      </a>
+  </p>
+
 </div>
 
 <div class="row">
@@ -89,7 +109,7 @@ img {
     <div class="card">
       <h2>Embed Insurance Applications into Agent Websites</h2>
       <h5>August 12, 2021</h5>
-      <img src="pics/insuranceapps.jpg">
+      <img src="pics/insuranceapps.jpg " class="article-image">
     </div>
     </div>
 </a>
@@ -99,7 +119,7 @@ img {
     <div class="card">
       <h2>How to Automate eSignatures After Online Payment</h2>
       <h5>August 3, 2021</h5>
-      <img src="pics/automateesigs.jpg">
+      <img src="pics/automateesigs.jpg" class="article-image">
     </div>
   </div>
 </a>
@@ -111,7 +131,7 @@ img {
     <div class="card">
       <h2>Open Source API Documentation Tools (And Why They Matter)</h2>
       <h5>July 2, 2021</h5>
-      <img src="pics/opensourceapitools.png">
+      <img src="pics/opensourceapitools.png" class="article-image">
     </div>
   </div>
   </a>
@@ -121,7 +141,7 @@ img {
       <div class="card">
         <h2>Getting Started with the HelloSign API in Python</h2>
         <h5>April 20, 2021</h5>
-        <img src="pics/hellosignpython.jpg">
+        <img src="pics/hellosignpython.jpg" class="article-image">
       </div>
     </div>
     </a>
@@ -131,7 +151,7 @@ img {
       <div class="card">
         <h2>Getting Started with Python &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
         <h5>March 21, 2021</h5>
-        <img src="pics/snowflake.png">
+        <img src="pics/snowflake.png" class="article-image">
       </div>
     </div>
   </a>
@@ -141,7 +161,7 @@ img {
     <div class="card">
       <h2>API Documentation and Help Docs: Can They Live Together?</h2>
       <h5>March 9, 2021</h5>
-      <img src="pics/apidocs.png">
+      <img src="pics/apidocs.png" class="article-image">
     </div>
   </div>
   </a>
@@ -151,7 +171,7 @@ img {
     <div class="card">
       <h2>Just a Simple API: List of APIs with Fun Data for Quick Mock-ups</h2>
       <h5>July 8, 2020</h5>
-      <img src="pics/funapis.jpg">
+      <img src="pics/funapis.jpg" class="article-image">
     </div>
   </div>
   </a>
@@ -161,7 +181,7 @@ img {
     <div class="card">
       <h2>Why Python is the Best Language for Developer Content</h2>
       <h5>July 6, 2020</h5>
-      <img src="pics/pythonbest.jpg">
+      <img src="pics/pythonbest.jpg" class="article-image">
     </div>
   </div>
   </a>
@@ -172,7 +192,7 @@ img {
     <div class="card">
       <h2>Diffie-Hellman Key Exchange: How Does it Work?</h2>
       <h5>November 23, 2020</h5>
-      <img src="pics/ockam.png">
+      <img src="pics/ockam.png" class="article-image">
     </div>
   </div>
   </a>
@@ -182,7 +202,7 @@ img {
     <div class="card">
       <h2>Public Key Encryption Explained &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h2>
       <h5>August 8, 2020</h5>
-      <img src="pics/ockam.png">
+      <img src="pics/ockam.png" class="article-image">
     </div>
   </div>
   </a>
@@ -192,7 +212,7 @@ img {
     <div class="card">
       <h2>Where Should Open Source Communities Chat?</h2>
       <h5>August 4, 2020</h5>
-      <img src="pics/ockam.png">
+      <img src="pics/ockam.png" class="article-image">
     </div>
   </div>
 </a>
@@ -202,7 +222,7 @@ img {
       <div class="card">
         <h2>How to Create an API in Three Steps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
         <h5>May 11, 2020</h5>
-        <img src="pics/apithreesteps.jpg">
+        <img src="pics/apithreesteps.jpg" class="article-image">
       </div>
     </div>
   </a>
@@ -212,7 +232,7 @@ img {
       <div class="card">
         <h2> Get Started with TensorFlow </h2>
         <h5>Nov 3, 2019</h5>
-        <img src="pics/githubtensorflow.png">
+        <img src="pics/githubtensorflow.png" class="article-image">
       </div>
     </div>
   </a>
@@ -222,7 +242,7 @@ img {
       <div class="card">
         <h2>Intermediate Python Learning Lab</h2>
         <h5>Oct 18, 2019</h5>
-        <img src="pics/github.png">
+        <img src="pics/github.png" class="article-image">
       </div>
     </div>
   </a>
@@ -237,7 +257,21 @@ img {
   </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <h2>Thanks for visiting!</h2> 
+
+  <p>
+    <a style="text-decoration:none" href="https://github.com/lukegalbraithrussell">
+    <img alt="github.com/lukegalbraithrussell" src="pics/githublogo.png" height="40px">
+    </a>
+
+    <a style="text-decoration:none" href="mailto:luke.galbraith.russell@gmail.com">
+    <img alt="mailto:luke.galbraith.russell@gmail.com" src="pics/email.png" height="40px">
+    </a>
+
+    <a style="text-decoration:none" href="https://www.linkedin.com/in/lukegalbraithrussell/">
+      <img alt="linkedin.com/in/lukegalbraithrussell/" src="pics/linkedin.png" height="40px">
+      </a>
+  </p>
 </div>
 
 </body>
