@@ -1,300 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Luke Russell's Portfolio</title>
-<meta name="description" content="A Collection of Luke Russell's Writings">
-<meta name="author" content="Luke Russell">
-<meta property="og:title" content="Luke Russell's Portfolio">
-<meta property="og:type" content="website">
-<meta property="og:description" content="A Collection of Luke Russell's Writings">
-<meta property="og:image" content="pics/luke.png">
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="manifest" href="favicons/site.webmanifest">
-
-<style>
-* {
-  box-sizing: border-box;
-}
-/* Add a gray background color with some padding */
-body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 10px;
-  font-size: 20px;
-  text-align: center;
-  /* background: white; */
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.column {   
-  float: left;
-  width: 33.33%;
-  padding: 10pt;
-}
-
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-   height: 450px;
-   overflow: hidden;
-}
-
-/* mage */
-.article-image {
-  background-color: #aaa;
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-}
-
-a {
-        color: #000000;
-        text-decoration:none;
-      }
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 1100px) {
-  .column {   
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .column {   
-    width: 100%;
-  }
-
-  .article-image {
-  height: 70%;
-  }
-}
-</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Luke Russell's Portfolio</title>
+	<meta name="description" content="A Collection of Luke Russell's Writings">
+	<meta name="author" content="Luke Russell">
+	<meta property="og:title" content="Luke Russell's Portfolio">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="A Collection of Luke Russell's Writings">
+	<meta property="og:image" content="pics/luke.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<style>
+	* {
+		box-sizing: border-box;
+	}
+	
+	body {
+		font-family: Arial;
+		padding: 20px;
+		background: #f1f1f1;
+	}
+	
+	.header {
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+		/* background: white; */
+	}
+	
+	.column {
+		float: left;
+		width: 33.33%;
+		padding: 10pt;
+	}
+	
+	.card {
+		background-color: white;
+		padding: 20px;
+		margin-top: 20px;
+		height: 450px;
+		overflow: hidden;
+	}
+	
+	.article-image {
+		background-color: #aaa;
+		width: 100%;
+		height: 60%;
+		object-fit: cover;
+	}
+	
+	a {
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	.footer {
+		padding: 20px;
+		text-align: center;
+		margin-top: 20px;
+	}
+	
+	@media screen and (max-width: 1100px) {
+		.column {
+			width: 50%;
+		}
+	}
+	
+	@media screen and (max-width: 800px) {
+		.column {
+			width: 100%;
+		}
+		.article-image {
+			height: 70%;
+		}
+	}
+	</style>
 </head>
 
-
 <body>
-
-<div class="header">
-  <h2>Hello!</h2>
-  <p>When I get the byline for an article I write, I link the article here. Take a look!</p>
-
-  <p>
-    <a style="text-decoration:none" href="https://github.com/lukegalbraithrussell">
-    <img alt="github.com/lukegalbraithrussell" src="pics/githublogo.png" height="40px">
-    </a>
-
-    <a style="text-decoration:none" href="mailto:luke.galbraith.russell@gmail.com">
-    <img alt="mailto:luke.galbraith.russell@gmail.com" src="pics/email.png" height="40px">
-    </a>
-
-    <a style="text-decoration:none" href="https://www.linkedin.com/in/lukegalbraithrussell/">
-      <img alt="linkedin.com/in/lukegalbraithrussell/" src="pics/linkedin.png" height="40px">
-      </a>
-  </p>
-
-</div>
-
-<div class="row">
-
-
-  <div class="column">
-    <a href="https://www.hellosign.com/blog/embed-insurance-applications-into-agent-websites">
-    <div class="card">
-      <h2>Embed Insurance Applications into Agent Websites</h2>
-      <h5>August 12, 2021</h5>
-      <img src="pics/insuranceapps.jpg " class="article-image">
-    </div>
-  </a>
-    </div>
-
-  <div class='column'>
-    <a href="https://www.hellosign.com/blog/how-to-automate-esignatures-after-online-payment">
-    <div class="card">
-      <h2>How to Automate eSignatures After Online Payment</h2>
-      <h5>August 3, 2021</h5>
-      <img src="pics/automateesigs.jpg" class="article-image">
-    </div>
-  </a>
-  </div>
-
-
-  <div class='column'>
-    <a href="https://blog.stoplight.io/open-source-api-documentation-tools-and-why-they-matter">
-    <div class="card">
-      <h2>Open Source API Documentation Tools (And Why They Matter)</h2>
-      <h5>July 2, 2021</h5>
-      <img src="pics/opensourceapitools.png" class="article-image">
-    </div>
-  </a>
-  </div>
-  </a>
-
-    <div class="column">
-      <a href="https://www.hellosign.com/blog/getting-started-with-the-hellosign-api-in-python">
-      <div class="card">
-        <h2>Getting Started with the HelloSign API in Python</h2>
-        <h5>April 20, 2021</h5>
-        <img src="pics/hellosignpython.jpg" class="article-image">
-      </div>
-    </a>
-    </div>
-
-    <div class='column'>
-      <a href="https://quickstarts.snowflake.com/guide/getting_started_with_python/index.html?index=..%2F..index#11">
-      <div class="card">
-        <h2>Getting Started with Python &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
-        <h5>March 21, 2021</h5>
-        <img src="pics/snowflake.png" class="article-image">
-      </div>
-    </a>
-    </div>
-
-  <div class='column'>
-    <a href="https://blog.stoplight.io/api-documentation-and-help-docs-can-they-live-together">
-    <div class="card">
-      <h2>API Documentation and Help Docs: Can They Live Together?</h2>
-      <h5>March 9, 2021</h5>
-      <img src="pics/apidocs.png" class="article-image">
-    </div>
-  </a>
-  </div>
-
-  <div class='column'>
-    <a href="https://blog.stoplight.io/just-a-simple-api">
-    <div class="card">
-      <h2>Just a Simple API: List of APIs with Fun Data for Quick Mock-ups</h2>
-      <h5>July 8, 2020</h5>
-      <img src="pics/funapis.jpg" class="article-image">
-    </div>
-  </a>
-  </div>
-
-  <div class='column'>
-    <a href="https://everydeveloper.com/python-best-language-developer-content/">
-    <div class="card">
-      <h2>Why Python is the Best Language for Developer Content</h2>
-      <h5>July 6, 2020</h5>
-      <img src="pics/pythonbest.jpg" class="article-image">
-    </div>
-  </a>
-  </div>
-
-
-  <div class='column'>
-    <a href="https://www.ockam.io/learn/blog/diffie-hellman_key_exchange/">
-    <div class="card">
-      <h2>Diffie-Hellman Key Exchange: How Does it Work?</h2>
-      <h5>November 23, 2020</h5>
-      <img src="pics/ockam.png" class="article-image">
-    </div>
-  </a>
-  </div>
-
-  <div class='column'>
-    <a href="https://www.ockam.io/learn/blog/public-key-encryption-explained">
-    <div class="card">
-      <h2>Public Key Encryption Explained &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h2>
-      <h5>August 8, 2020</h5>
-      <img src="pics/ockam.png" class="article-image">
-    </div>
-  </a>
-  </div>
-
-  <div class='column'>
-    <a href="https://www.ockam.io/learn/blog/where_should_open_source_communities_chat/">
-    <div class="card">
-      <h2>Where Should Open Source Communities Chat?</h2>
-      <h5>August 4, 2020</h5>
-      <img src="pics/ockam.png" class="article-image">
-    </div>
-  </a>
-  </div>
-
-    <div class='column'>
-      <a href="https://blog.stoplight.io/how-to-create-an-api-in-three-steps">
-      <div class="card">
-        <h2>How to Create an API in Three Steps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
-        <h5>May 11, 2020</h5>
-        <img src="pics/apithreesteps.jpg" class="article-image">
-      </div>
-    </a>
-    </div>
-
-    <div class='column'>
-      <a href="https://lab.github.com/everydeveloper/advance-tensorflow">
-      <div class="card">
-        <h2> Get Started with TensorFlow </h2>
-        <h5>Nov 3, 2019</h5>
-        <img src="pics/githubtensorflow.png" class="article-image">
-      </div>
-    </a>
-    </div>
-
-    <div class='column'>
-      <a href="https://lab.github.com/everydeveloper/intermediate-python">
-      <div class="card">
-        <h2>Intermediate Python Learning Lab</h2>
-        <h5>Oct 18, 2019</h5>
-        <img src="pics/github.png" class="article-image">
-      </div>
-    </a>
-    </div>
-
-    <div class='column'>
-      <div class="card">
-        <h2 style="padding:30%;text-align:center";>And many more without bylines...</h2>
-      </div>
-    </div>
-
-
-  </div>
-
-<div class="footer">
-  <h2>Thanks for visiting!</h2> 
-
-  <p>
-    <a style="text-decoration:none" href="https://github.com/lukegalbraithrussell">
-    <img alt="github.com/lukegalbraithrussell" src="pics/githublogo.png" height="40px">
-    </a>
-
-    <a style="text-decoration:none" href="mailto:luke.galbraith.russell@gmail.com">
-    <img alt="mailto:luke.galbraith.russell@gmail.com" src="pics/email.png" height="40px">
-    </a>
-
-    <a style="text-decoration:none" href="https://www.linkedin.com/in/lukegalbraithrussell/">
-      <img alt="linkedin.com/in/lukegalbraithrussell/" src="pics/linkedin.png" height="40px">
-      </a>
-  </p>
-</div>
-
+	<div class="header">
+		<h2>Hello!</h2>
+		<p>When I get the byline for an article I write, I link the article here. Take a look!</p>
+		<p>
+			<a style="text-decoration:none" href="https://github.com/lukegalbraithrussell"> <img alt="github.com/lukegalbraithrussell" src="pics/githublogo.png" height="40px"> </a>
+			<a style="text-decoration:none" href="mailto:luke.galbraith.russell@gmail.com"> <img alt="mailto:luke.galbraith.russell@gmail.com" src="pics/email.png" height="40px"> </a>
+			<a style="text-decoration:none" href="https://www.linkedin.com/in/lukegalbraithrussell/"> <img alt="linkedin.com/in/lukegalbraithrussell/" src="pics/linkedin.png" height="40px"> </a>
+		</p>
+	</div>
+	<div class="row">
+		<div class="column">
+			<a href="https://www.hellosign.com/blog/embed-insurance-applications-into-agent-websites">
+				<div class="card">
+					<h2>Embed Insurance Applications into Agent Websites</h2>
+					<h5>August 12, 2021</h5> <img src="pics/insuranceapps.jpg " class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://www.hellosign.com/blog/how-to-automate-esignatures-after-online-payment">
+				<div class="card">
+					<h2>How to Automate eSignatures After Online Payment</h2>
+					<h5>August 3, 2021</h5> <img src="pics/automateesigs.jpg" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://blog.stoplight.io/open-source-api-documentation-tools-and-why-they-matter">
+				<div class="card">
+					<h2>Open Source API Documentation Tools (And Why They Matter)</h2>
+					<h5>July 2, 2021</h5> <img src="pics/opensourceapitools.png" class="article-image"> </div>
+			</a>
+		</div>
+		</a>
+		<div class="column">
+			<a href="https://www.hellosign.com/blog/getting-started-with-the-hellosign-api-in-python">
+				<div class="card">
+					<h2>Getting Started with the HelloSign API in Python</h2>
+					<h5>April 20, 2021</h5> <img src="pics/hellosignpython.jpg" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://quickstarts.snowflake.com/guide/getting_started_with_python/index.html?index=..%2F..index#11">
+				<div class="card">
+					<h2>Getting Started with Python &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
+					<h5>March 21, 2021</h5> <img src="pics/snowflake.png" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://blog.stoplight.io/api-documentation-and-help-docs-can-they-live-together">
+				<div class="card">
+					<h2>API Documentation and Help Docs: Can They Live Together?</h2>
+					<h5>March 9, 2021</h5> <img src="pics/apidocs.png" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://blog.stoplight.io/just-a-simple-api">
+				<div class="card">
+					<h2>Just a Simple API: List of APIs with Fun Data for Quick Mock-ups</h2>
+					<h5>July 8, 2020</h5> <img src="pics/funapis.jpg" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://everydeveloper.com/python-best-language-developer-content/">
+				<div class="card">
+					<h2>Why Python is the Best Language for Developer Content</h2>
+					<h5>July 6, 2020</h5> <img src="pics/pythonbest.jpg" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://www.ockam.io/learn/blog/diffie-hellman_key_exchange/">
+				<div class="card">
+					<h2>Diffie-Hellman Key Exchange: How Does it Work?</h2>
+					<h5>November 23, 2020</h5> <img src="pics/ockam.png" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://www.ockam.io/learn/blog/public-key-encryption-explained">
+				<div class="card">
+					<h2>Public Key Encryption Explained &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h2>
+					<h5>August 8, 2020</h5> <img src="pics/ockam.png" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://www.ockam.io/learn/blog/where_should_open_source_communities_chat/">
+				<div class="card">
+					<h2>Where Should Open Source Communities Chat?</h2>
+					<h5>August 4, 2020</h5> <img src="pics/ockam.png" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://blog.stoplight.io/how-to-create-an-api-in-three-steps">
+				<div class="card">
+					<h2>How to Create an API in Three Steps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
+					<h5>May 11, 2020</h5> <img src="pics/apithreesteps.jpg" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://lab.github.com/everydeveloper/advance-tensorflow">
+				<div class="card">
+					<h2> Get Started with TensorFlow </h2>
+					<h5>Nov 3, 2019</h5> <img src="pics/githubtensorflow.png" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<a href="https://lab.github.com/everydeveloper/intermediate-python">
+				<div class="card">
+					<h2>Intermediate Python Learning Lab</h2>
+					<h5>Oct 18, 2019</h5> <img src="pics/github.png" class="article-image"> </div>
+			</a>
+		</div>
+		<div class='column'>
+			<div class="card">
+				<h2 style="padding:30%;text-align:center" ;>And many more without bylines...</h2> </div>
+		</div>
+	</div>
+	<div class="footer">
+		<h2>Thanks for visiting!</h2>
+		<p>
+			<a style="text-decoration:none" href="https://github.com/lukegalbraithrussell"> <img alt="github.com/lukegalbraithrussell" src="pics/githublogo.png" height="40px"> </a>
+			<a style="text-decoration:none" href="mailto:luke.galbraith.russell@gmail.com"> <img alt="mailto:luke.galbraith.russell@gmail.com" src="pics/email.png" height="40px"> </a>
+			<a style="text-decoration:none" href="https://www.linkedin.com/in/lukegalbraithrussell/"> <img alt="linkedin.com/in/lukegalbraithrussell/" src="pics/linkedin.png" height="40px"> </a>
+		</p>
+	</div>
 </body>
+
 </html>
