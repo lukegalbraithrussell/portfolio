@@ -1,441 +1,244 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Luke Russell</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/favicon-rocket.ico" type="image/x-icon"/>
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118984273-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-118984273-1');
-		</script>
-	</head>
-	<body>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-grav"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Hello!</h1>
-								<p>One day I hope to do some cool stuff, and that cool stuff will be here.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#research">Meteors</a></li>
-								<!-- <li><a href="#politics">Politics</a></li>
-								<li><a href="#data">Data</a></li> -->
-								<li><a href="#resume">Resume</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image half"><img src="images/LukeRussellSquare.jpg" alt="" /></span>
-								<p>In my free time I do cool stuff like Professor Rembold's <a href="https://jrembold.github.io/WUPhys-CodeComp/">Bot Tournament</a> and somewhat superfluous stuff like customizing my ArchLinux <a href="https://github.com/lukegalbraithrussell/dotfiles">build.</a> I also am pretty into weightlifting, probably because <i> Mens sana in corpore sano</i> was drilled into my head by my Latin prof. </p>
-								<p><a href="mailto:luke.galbraith.russell@gmail.com" target="_top">Email me</a> with questions or comments. </p>
-								<p>Check out my projects on my <a href="https://github.com/lukegalbraithrussell">Github.</a>
-								<p> I'm also looking for a job! Feel free to glance at my <a href="#resume">resume.</a> 
-							</article>
-
-						<!-- Research -->
-							<article id="research">
-								<h2 class="major">Meteors</h2>
-								<iframe width="100%" height="400" src="https://www.youtube.com/embed/VmR5fewT9g8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-								<!--<iframe width="100%" height="400" src="https://drive.google.com/file/d/1zpyOVjsdoFk81eTlTln4xz2KmeiFUhNd/preview"></iframe>-->
-								<!--<embed src="images/presentation.pdf" width="100%" height="400" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">-->
-								<p>Outer space, while mostly space, is not entirely empty. There are planets, stars, comets, and many other objects, but we're focusing onmeteors. Specifically, we are interested in the smallest meteors. While rocks the size of pebbles may not seem dangerous to those of us protected by Earth’s atmosphere, they pose a great threat to equipment and life beyond that atmosphere. We desire to know how many of these objects are in orbit near Earth in order to estimate the necessary level of protection for our structures in space and to better estimate the lifespans of those structures.</p>
-								<p>Currently, one of the ways meteors can be detected entering our atmosphere is by all-sky cameras detecting the bright streaks they leave as they ablate in the atmosphere. This brightness is what gives them another name: fireballs. All-sky cameras are set up by NASA and other groups. They are installed on roofs or mounts and hooked up to desktop computers in buildings. It is a big and inflexible setup. This required infrastructure limits the amount of setups that currently exist, which in turn limits the amount of total sky coverage we can get. Our all-sky camera explores a new design: one in which its detection software is housed inside its small, basketball-sized chassis. It currently depends on external power, but low power consumption makes it a strong candidate to run off battery power if needed. We aim to show that our tiny unit (named D6 due to its resemblance to Wedge Antille's astromech unit) is capable of observing and analyzing fireballs just as reliably as the larger, more established networks.</p>
-								<span class="image half"><img src="images/deesix.jpg" alt="" /></span>
-								<p>We are using our all-sky camera to detect meteors, utilizing photometry to calculate the meteors’ magnitudes, and then extrapolating their masses from those magnitudes. There have been many other studies by larger all-sky networks to create a model for the population distribution. We have no reason to expect our data to deviate greatly from this trend. In fact, we are hoping to test the effectiveness of our all-sky camera setup by comparing its findings to the established model. Also, while the general trend is well known, there is no guarantee that it is as precise as it could be. We are curious about any possible small discrepancies within the model regarding the smaller size meteoroids, and believe that if any discrepancies are there, they would only become apparent if data was being collected much more frequently than the current rate.</p>
-								
-								<p>The size of meteors are determined through a long chain of physical relations that begin at its apparent magnitude. So, first thing to do is be able to find the magnitude of the fireball when Deesix detects it. I've written a script where we can find the magnitude of the fireball as long as we know the apparent magnitude of another object in the sky (such as a star). 
-								<span class="image main"><img src="images/ProgramLandscape.png" alt="" /></span>
-								
-								<p>The results are concisely summarized in the poster below, made for a poster presentation at Linfield College.</p>
-								<span class="image main"><img src="images/ThesisPoster.png" alt="" /></span>  
-
-								<!--This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to slices of the data to automatically find the radius at that frame, then summing over all the pixesl to find the magnitude. -->
-								<!--<span class="image main"><img src="images/nasagraph.png" alt="" /></span>-->
-
-								<!--<p> After the program does that for every frame, we can get the light curve of the event. Here's a light curve from an Iridium flare.-->
-								<!--<span class="image main"><img src="images/flare.png" alt="" /></span>-->
-
-								<!--<p> And a light curve from an event from NASA's all-sky camera network, compared with their own light curve of the event.-->
-								<!--<span class="image main"><img src="images/curve.png" alt="" /></span>-->
-
-								<!--We did this for a lot of events! Here, violin plots make it easy to visualize how far off my program was from NASA's-->
-								<!--<span class="image main"><img src="images/AllViolins.png" alt="" /></span>-->
-
-
-
-
-								 
-							</article>
-
-						<!-- Research -->
-							<article id="politics">
-								<h2 class="major">Political Clusters</h2>
-								<p>This project can also be titled as "Why KMeans Clustering Is Pretty Bad With Non-Symmetric Datasets" or "Delineating States into Nice Clusters Is Unrealistic, and Only Serves to Push Lazy Political Narratives". Or I guess it could also be titled "Idiot Uses Wrong Clustering Method, Ignoring Obviously Perfect Method".</p>
-								<p>Anyway, the point of this project was for me to practive doing some simple unsupervised machine learning while also trying to solve the forever debated problem of what the regions of the United States are. For example, people say Hilary Clinton lost because of the midwest, but what even is the midwest?? Nobody really can agree on that. So I set out to see if I could find some pattern in the political data of the states. </p>
-								<p>Basically, I collected the voting results for all the states for all the presidential elections since 1976, the racial demographics of the states as of 2016, the geographic centers of each state, and the results of 538's polls on what people consider the midwest and the south. I then tried KMeans clustering the data, trying to find good weights for the features. </p>
-								<p> The clustering could never quite settle down, but an example of the types of maps I was producing are shown here:</p>
-								<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div><div id="8aedbce4-949f-40d6-b40c-55cdbb2dc105" style="height: 100%; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";
-if (document.getElementById("8aedbce4-949f-40d6-b40c-55cdbb2dc105")) {
-    Plotly.newPlot("8aedbce4-949f-40d6-b40c-55cdbb2dc105", [{"autocolorscale": false, "colorscale": [[0.0, "rgb(141,211,199)"], [0.125, "rgb(255,255,179)"], [0.25, "rgb(190,186,218)"], [0.375, "rgb(251,128,114)"], [0.5, "rgb(128,177,211)"], [0.625, "rgb(253,180,98)"], [0.75, "rgb(179,222,105)"], [0.875, "rgb(252,205,229)"], [1.0, "rgb(217,217,217)"]], "locationmode": "USA-states", "locations": ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"], "marker": {"line": {"color": "rgb(255,255,255)", "width": 2}}, "z": [5.0, 7.0, 0.0, 1.0, 6.0, 0.0, 2.0, 2.0, 5.0, 5.0, 6.0, 7.0, 4.0, 3.0, 3.0, 3.0, 1.0, 5.0, 2.0, 2.0, 2.0, 4.0, 4.0, 5.0, 3.0, 7.0, 3.0, 0.0, 2.0, 2.0, 0.0, 2.0, 5.0, 7.0, 4.0, 1.0, 6.0, 2.0, 2.0, 5.0, 7.0, 1.0, 5.0, 0.0, 2.0, 2.0, 6.0, 1.0, 4.0, 7.0], "type": "choropleth", "uid": "f2b0125d-b333-4c98-8183-0d2a5c652e79"}], {}, {"showLink": false, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly"}); 
-}
-</script><script type="text/javascript">window.addEventListener("resize", function(){if (document.getElementById("8aedbce4-949f-40d6-b40c-55cdbb2dc105")) {Plotly.Plots.resize(document.getElementById("8aedbce4-949f-40d6-b40c-55cdbb2dc105"));};})</script></div>
-
-								<!--This is done through automatically centering on the brightest part of the object that was clicked and then fitting a gaussian to slices of the data to automatically find the radius at that frame, then summing over all the pixesl to find the magnitude. -->
-								<!--<span class="image main"><img src="images/nasagraph.png" alt="" /></span>-->
-
-								<!--<p> After the program does that for every frame, we can get the light curve of the event. Here's a light curve from an Iridium flare.-->
-								<!--<span class="image main"><img src="images/flare.png" alt="" /></span>-->
-
-								<!--<p> And a light curve from an event from NASA's all-sky camera network, compared with their own light curve of the event.-->
-								<!--<span class="image main"><img src="images/curve.png" alt="" /></span>-->
-
-								<!--We did this for a lot of events! Here, violin plots make it easy to visualize how far off my program was from NASA's-->
-								<!--<span class="image main"><img src="images/AllViolins.png" alt="" /></span>-->
-
-
-
-
-								 
-							</article>
-
-
-						<!--[> Media <]-->
-							<article id="data">
-								<h2 class="major">Data (Under Construction)</h2>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/1.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/2.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/3.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<!--<a href="https://github.com/jrembold/AllSky"><img src="images/4.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>-->
-								<a href="https://github.com/jrembold/AllSky"><img src="images/5.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/6.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/7.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/8.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/9.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/10.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/11.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/12.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/jrembold/AllSky"><img src="images/13.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>	
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/14.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/15.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/16.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/17.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/18.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/19.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/20.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/21.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/22.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/23.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/24.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/25.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/26.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-								<a href="https://github.com/lukegalbraithrussell/School-Projects"><img src="images/27.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-
-
-					</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<!--<span class="image main"><img src="images/pic04.jpg" alt="" /></span>-->
-								<!--<p> my Github account for projects and their source code <a href="https://github.com/lukegalbraithrussell" class="icon fa-github"><span class="label">Github</span></a>-->
-							</article>
-
-						<!-- Resume -->
-							<article id="resume">
-								<h2 class="major">Resume</h2>
-								<embed src="images/lukerussellresumeDec2019.pdf" width="100%" height="1000" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
-
-							</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
 }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
 
-								<section>
-									<h3 class="major">Lists</h3>
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.column {   
+  float: left;
+  width: 33.33%;
+  padding: 10pt;
+}
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   height: 450px;
+   overflow: hidden;
+}
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-									</ul>
+/* mage */
+img {
+  background-color: #aaa;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions vertical">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button special">Special</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button special icon fa-download">Icon</a></li>
-										<li><a href="#" class="button icon fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button special disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+@media screen and (max-width: 1060px) {
+  .column {   
+    width: 100%;
+  }
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="demo-name">Name</label>
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-										</div>
-										<div class="field half">
-											<label for="demo-email">Email</label>
-											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-										</div>
-										<div class="field">
-											<label for="demo-category">Category</label>
-											<div class="select-wrapper">
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-										</div>
-										<div class="field half first">
-											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-											<label for="demo-priority-low">Low</label>
-										</div>
-										<div class="field half">
-											<input type="radio" id="demo-priority-high" name="demo-priority">
-											<label for="demo-priority-high">High</label>
-										</div>
-										<div class="field half first">
-											<input type="checkbox" id="demo-copy" name="demo-copy">
-											<label for="demo-copy">Email me a copy</label>
-										</div>
-										<div class="field half">
-											<input type="checkbox" id="demo-human" name="demo-human" checked>
-											<label for="demo-human">Not a robot</label>
-										</div>
-										<div class="field">
-											<label for="demo-message">Message</label>
-											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+  img {
+  height: 70%;
+  }
+}
 
-							</article>
+</style>
+</head>
+<body>
 
-					</div>
+<div class="header">
+  <h3>A Collection of Luke Russell's Writings</h3>
+</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Luke G. Russell. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+<div class="row">
 
-			</div>
+<a href="https://www.hellosign.com/blog/embed-insurance-applications-into-agent-websites">
+  <div class="column">
+    <div class="card">
+      <h2>Embed Insurance Applications into Agent Websites</h2>
+      <h5>August 12, 2021</h5>
+      <img src="pics/insuranceapps.jpg">
+    </div>
+    </div>
+</a>
 
-		<!-- BG -->
-			<div id="bg"></div>
+<a href="https://www.hellosign.com/blog/how-to-automate-esignatures-after-online-payment">
+  <div class='column'>
+    <div class="card">
+      <h2>How to Automate eSignatures After Online Payment</h2>
+      <h5>August 3, 2021</h5>
+      <img src="pics/automateesigs.jpg">
+    </div>
+  </div>
+</a>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+
+  <a href="https://blog.stoplight.io/open-source-api-documentation-tools-and-why-they-matter">
+  <div class='column'>
+    <div class="card">
+      <h2>Open Source API Documentation Tools (And Why They Matter)</h2>
+      <h5>July 2, 2021</h5>
+      <img src="pics/opensourceapitools.png">
+    </div>
+  </div>
+  </a>
+
+  <a href="https://www.hellosign.com/blog/getting-started-with-the-hellosign-api-in-python">
+    <div class="column">
+      <div class="card">
+        <h2>Getting Started with the HelloSign API in Python</h2>
+        <h5>April 20, 2021</h5>
+        <img src="pics/hellosignpython.jpg">
+      </div>
+    </div>
+    </a>
+
+  <a href="https://quickstarts.snowflake.com/guide/getting_started_with_python/index.html?index=..%2F..index#11">
+    <div class='column'>
+      <div class="card">
+        <h2>Getting Started with Python &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
+        <h5>March 21, 2021</h5>
+        <img src="pics/snowflake.png">
+      </div>
+    </div>
+  </a>
+
+  <a href="https://blog.stoplight.io/api-documentation-and-help-docs-can-they-live-together">
+  <div class='column'>
+    <div class="card">
+      <h2>API Documentation and Help Docs: Can They Live Together?</h2>
+      <h5>March 9, 2021</h5>
+      <img src="pics/apidocs.png">
+    </div>
+  </div>
+  </a>
+
+  <a href="https://blog.stoplight.io/just-a-simple-api">
+  <div class='column'>
+    <div class="card">
+      <h2>Just a Simple API: List of APIs with Fun Data for Quick Mock-ups</h2>
+      <h5>July 8, 2020</h5>
+      <img src="pics/funapis.jpg">
+    </div>
+  </div>
+  </a>
+
+  <a href="https://everydeveloper.com/python-best-language-developer-content/">
+  <div class='column'>
+    <div class="card">
+      <h2>Why Python is the Best Language for Developer Content</h2>
+      <h5>July 6, 2020</h5>
+      <img src="pics/pythonbest.jpg">
+    </div>
+  </div>
+  </a>
+
+
+<a href="https://www.ockam.io/learn/blog/diffie-hellman_key_exchange/">
+  <div class='column'>
+    <div class="card">
+      <h2>Diffie-Hellman Key Exchange: How Does it Work?</h2>
+      <h5>November 23, 2020</h5>
+      <img src="pics/ockam.png">
+    </div>
+  </div>
+  </a>
+
+  <a href="https://www.ockam.io/learn/blog/public-key-encryption-explained">
+  <div class='column'>
+    <div class="card">
+      <h2>Public Key Encryption Explained &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h2>
+      <h5>August 8, 2020</h5>
+      <img src="pics/ockam.png">
+    </div>
+  </div>
+  </a>
+
+<a href="https://www.ockam.io/learn/blog/where_should_open_source_communities_chat/">
+  <div class='column'>
+    <div class="card">
+      <h2>Where Should Open Source Communities Chat?</h2>
+      <h5>August 4, 2020</h5>
+      <img src="pics/ockam.png">
+    </div>
+  </div>
+</a>
+
+<a href="https://blog.stoplight.io/how-to-create-an-api-in-three-steps">
+    <div class='column'>
+      <div class="card">
+        <h2>How to Create an API in Three Steps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</h2>
+        <h5>May 11, 2020</h5>
+        <img src="pics/apithreesteps.jpg">
+      </div>
+    </div>
+  </a>
+
+  <a href="https://lab.github.com/everydeveloper/advance-tensorflow">
+    <div class='column'>
+      <div class="card">
+        <h2> Get Started with TensorFlow </h2>
+        <h5>Nov 3, 2019</h5>
+        <img src="pics/githubtensorflow.png">
+      </div>
+    </div>
+  </a>
+
+  <a href="https://lab.github.com/everydeveloper/intermediate-python">
+    <div class='column'>
+      <div class="card">
+        <h2>Intermediate Python Learning Lab</h2>
+        <h5>Oct 18, 2019</h5>
+        <img src="pics/github.png">
+      </div>
+    </div>
+  </a>
+
+    <div class='column'>
+      <div class="card">
+        <h2 style="padding:30%;text-align:center";>And many more without bylines...</h2>
+      </div>
+    </div>
+
+
+  </div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
 </html>
